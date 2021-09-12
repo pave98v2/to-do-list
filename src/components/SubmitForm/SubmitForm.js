@@ -1,4 +1,5 @@
 import React from "react";
+import './SubmitForm.css';
 
 class SubmitForm extends React.Component {
 
@@ -26,12 +27,12 @@ class SubmitForm extends React.Component {
         <form onSubmit={this.handleSubmit}>
           <label>
             Task:
-            <input
-              type="text"
-              value={this.state.value}
-              onChange={this.handleChange}
-            />
           </label>
+          <input
+            type="text"
+            value={this.state.value}
+            onChange={this.handleChange}
+          />
           <input type="submit" value="Add to list" />
         </form>
         <h4>{this.state.value}</h4>

@@ -1,0 +1,8 @@
+.submit-form label {
+  margin-right: .5rem;
+  display: inline-block;
+}
+.submit-form input[type="text"] {
+  margin-right: .5rem;
+  display: inline-block;
+}
