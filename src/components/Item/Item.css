@@ -1,0 +1,14 @@
+.item {
+  border-bottom: 2px solid #000;
+  margin-bottom: 2rem;
+}
+
+.item p {
+  display: inline-block;
+  width: max-content;
+  margin: 5px;
+}
+
+.item button {
+  float: right;
+}

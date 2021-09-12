@@ -10,6 +10,7 @@ class TodoList extends React.Component {
       listItems: []
     };
     this.addItem = this.addItem.bind(this);
+    this.deleteItem = this.deleteItem.bind(this);
   }
 
   addItem(item) {
@@ -19,11 +20,23 @@ class TodoList extends React.Component {
     }))
   }
 
+  deleteItem(index) {
+
+    const list = this.state.listItems;
+    if (index > -1) {
+      list.splice(index, 1);
+    }
+
+    this.setState({
+      listItems: list
+    })
+  }
+
   render() {
     return (
       <div className="todo-list">
         <SubmitForm addItem={this.addItem} />
-        <ListItems items={this.state.listItems} />
+        <ListItems deleteItem={this.deleteItem} items={this.state.listItems} />
       </div>
     );
   }
